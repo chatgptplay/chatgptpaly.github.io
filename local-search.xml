@@ -4,13 +4,45 @@
   
   
   <entry>
+    <title>利用AI帮助搭建网址(2024年1月持续更新)</title>
+    <link href="/build-web/"/>
+    <url>/build-web/</url>
+    
+    <content type="html"><![CDATA[<h1 id="利用AI帮助搭建网址"><a href="#利用AI帮助搭建网址" class="headerlink" title="利用AI帮助搭建网址"></a>利用AI帮助搭建网址</h1><p>搭建网站需要三个要素，文档，域名，服务器。</p><p>文档我们使用markdown，如果你还不会使用，请参考教程 <a href="https://chatgptplay.github.io/markdown-mdnice">免图床使用markdown-base码格式加mdnice渲染</a></p><p>服务器和域名我们使用github解决。网上看了很多教程，但是也遇到了很多问题，现在终于打通了，这里做下记录方便自己下次搭建。如有任何问题可以关注公众号小李同学314后台询问。</p><h2 id="第一步-安装Git"><a href="#第一步-安装Git" class="headerlink" title="第一步 安装Git"></a>第一步 安装Git</h2><p>网址：(<a href="https://git-scm.com/download/win)%E6%88%91%E9%80%89%E6%8B%A9%E4%BA%86%E6%9C%80%E6%96%B0%E7%89%88%E3%80%82%E4%B8%80%E8%B7%AF%E9%BB%98%E8%AE%A4%E5%AE%89%E8%A3%85%E5%B0%B1%E8%A1%8C%E3%80%82">https://git-scm.com/download/win)我选择了最新版。一路默认安装就行。</a></p><h2 id="第二步-安装nodejs"><a href="#第二步-安装nodejs" class="headerlink" title="第二步 安装nodejs"></a>第二步 安装nodejs</h2><p>网址：(<a href="https://nodejs.org/en">https://nodejs.org/en</a>) 也是一路默认安装</p><p>之后修改了保存路径，主要是防止C盘东西太多。</p><p>参考教程：(<a href="https://blog.csdn.net/yaorongke/article/details/119084295">https://blog.csdn.net/yaorongke/article/details/119084295</a>)</p><p>username.github.io尝试了很久无法创建网页，不知道问题处在哪里？检查了用户名没问题。<br>两个可能的原因：<br>第一，有可能需要过一会才会出现网页。<br>第二，可能需要新建一个readme文档。</p><h2 id="第三步-安装hexo"><a href="#第三步-安装hexo" class="headerlink" title="第三步 安装hexo"></a>第三步 安装hexo</h2><p>参考教程(<a href="https://blog.csdn.net/yaorongke/article/details/119089190">https://blog.csdn.net/yaorongke/article/details/119089190</a>)</p><p>其中很大一部分需要用到themes&#x2F;fluid中的配置文件，应该是变成_config.fluid.yml了。 但是我的文件夹里并没有找到这些文件。所以这些暂时跳过。另外看评论区貌似统计流量等操作必须用leadcloud国际版。</p><h2 id="发布到github"><a href="#发布到github" class="headerlink" title="发布到github"></a>发布到github</h2><p>按照教程操作遇到如下错误：</p><div align="center"><img src=image.png width=40%/></div>解决方法：<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install hexo-deployer-git <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure><p>继续遇到问题应该时网络代理除了问题。</p><p>在传入github时使用tokens一直出现问题，无奈使用方法二。</p><p>直接拖动public文件夹到github，成功打开<a href="https://chatgptplay.github.io/">网页</a>。</p><div align="center"><img src=image-1.png width=80%/></div><h2 id="对网页进行精细化操作"><a href="#对网页进行精细化操作" class="headerlink" title="对网页进行精细化操作"></a>对网页进行精细化操作</h2><h3 id="hexo-常用命令"><a href="#hexo-常用命令" class="headerlink" title="hexo 常用命令"></a>hexo 常用命令</h3><p>hexo g -d: 这个命令组合实际上是两个命令的简写。hexo g 是 hexo generate 的缩写，它会生成静态文件；而 -d 参数是 –deploy 的缩写，它会在生成静态文件之后立即部署到配置好的服务器上。这个命令的作用是生成网站静态页面并将其部署。</p><p>hexo s: 这个命令是 hexo server 的缩写，它会启动一个本地服务器。这通常用于本地预览，可以在你的浏览器中输入 localhost:4000（默认端口为4000）来查看你的网站。</p><p>hexo init [folder]: 创建一个新的Hexo项目。如果提供了文件夹名称，Hexo会在指定的文件夹中创建项目。 </p><p>hexo new [layout] title: 创建一篇新文章。你可以指定布局（layout），比如post、page等，以及文章的标题。</p><p>hexo publish [layout] filename: 发布草稿。</p><p><a href="https://chatgptplay.github.io/build-web">参考来源</a></p><p>欢迎关注我的公众号<strong>小李同学314</strong>，如果你有任何问题都可以后台留言。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>免图床使用markdown-base码格式加mdnice渲染</title>
+    <link href="/markdown-mdnice/"/>
+    <url>/markdown-mdnice/</url>
+    
+    <content type="html"><![CDATA[<p>最近需要记录一些笔记，以及搭建一个网站，重新开始使用markdown，这里记录下不使用图床，而是利用base64码方便文档发布。</p><h2 id="markdown-介绍"><a href="#markdown-介绍" class="headerlink" title="markdown 介绍"></a>markdown 介绍</h2><p>Markdown是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。Markdown文件的后缀是 .md 或 .markdown。设计者John Gruber的目标是Markdown的格式语法极其简单，容易被阅读，且容易直接转换成HTML。</p><p>以下是Markdown的一些基础语法：<br>在Markdown中，你可以通过在文字前面加上#来创建标题。标题级别由#的数量表示,例如：</p><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs clean"># 这是一个H1标签<br>## 这是一个H2标签<br>### 这是一个H3标签<br>#### 这是一个H4标签<br>##### 这是一个H5标签<br>###### 这是一个H6标签<br></code></pre></td></tr></table></figure><p>普通的文本会被转换成段落，行末的两个或更多空格会被转换成换行。</p><p>你可以使用星号*或者下划线_来强调文本。一个用于斜体，两个用于粗体。例如：</p><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-strong">*这会是斜体*</span><br><span class="hljs-emphasis">_这也是斜体_</span><br><br><span class="hljs-strong">**这会是粗体**</span><br><span class="hljs-emphasis">__这也是粗体__</span><br></code></pre></td></tr></table></figure><p>他们效果如下：</p><p><em>这会是斜体</em><br><em>这也是斜体</em></p><p><strong>这会是粗体</strong><br><strong>这也是粗体</strong></p><p>链接使用方括号来标记文本，后面紧跟着圆括号内的URL。例如：<code>[Google](https://www.google.com)</code></p><p>图片的语法与链接类似，但前面要加一个感叹号！，然后是图片的替代文字，在圆括号中是图片的URL。例如： <code>![这是图片](https://example.com/image.jpg)</code></p><h2 id="VScode"><a href="#VScode" class="headerlink" title="VScode"></a>VScode</h2><p>vscode不亏是宇宙第一编辑器，我们只需要安装几款插件就可以进行markdown编写和预览。我安装的是：Markdown All in One 和 Markdown Preview Github Styling</p><p>插件安装如下图所示：</p><div align="center"><img src=image.png width=50%/></div><p>最喜欢vscode对图片的处理，我们直接粘贴图片，在md对应的文件夹就会生成一个对应图片文件。</p><h2 id="base64"><a href="#base64" class="headerlink" title="base64"></a>base64</h2><p>在发布markdown笔记时经常为图片发愁，看有人使用图床来解决这个问题，但是图床一般需要收费而且存在不稳定，数据丢失的问题，因此我们使用base64码。</p><p>这里就直接使用AI工具帮助我们啦！</p><p>我们对chatGPT提问：<br>假如你是一个python代码工程师，我有一个markdown文件图片转为base64的需求需要你完成，需求如下：<br>第一，文件路径 input_path 里有几张图片 后缀为png或者jpg等。还有一个后缀为md的文件。你需要将文件夹的所有图片转换为base64码格式，然后存储为字典格式。<br>第二，将md文档中对应的图片变为base64码，这样在渲染时就不需要图片路径只需要一个md文档就可以了。<br>第三，输出文件也在input_path文件夹下面，并且为原来名字+’_base.md’。</p><div align="center"><img src=image-2.png width=80%/></div><p>将md2base.py文件与md文件和图片放在同一个文件夹，后台输入</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim"><span class="hljs-keyword">python</span> md2base.<span class="hljs-keyword">py</span><br></code></pre></td></tr></table></figure><p>出现这个就成功啦！<br><code>Updated Markdown file saved as markdown-mdnice_base.md</code></p><p>关注公众号<strong>小李同学314</strong></p><p>后台回复base，就可以获得md2base.py源码啦！</p><p>目前还有一个小问题就是base64码太长了。我看有没有办法解决。</p><h2 id="mdnice"><a href="#mdnice" class="headerlink" title="mdnice"></a>mdnice</h2><p>最后将md文档复制到mdnice进行渲染就可以变为微信公众号格式或者其他格式啦！<br><a href="https://mdnice.com/">mdnice网址</a></p><p>ps(可能在mdnice有字数的问题，但是在其他平台基本都是可以的。)</p><p><a href="https://chatgptplay.github.io/markdown-mdnice">参考来源</a></p><p>欢迎关注我的公众号<strong>小李同学314</strong>，如果你有任何问题都可以后台留言。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2分钟注册谷歌邮箱（无须手机号）</title>
     <link href="/sign-up-gmail/"/>
     <url>/sign-up-gmail/</url>
     
-    <content type="html"><![CDATA[<h1 id="2分钟注册谷歌邮箱（无须手机号）"><a href="#2分钟注册谷歌邮箱（无须手机号）" class="headerlink" title="2分钟注册谷歌邮箱（无须手机号）"></a>2分钟注册谷歌邮箱（无须手机号）</h1><p>谷歌邮箱<br>Gmail已经成为全球数以亿计用户的首选电子邮件服务之一，不仅因为其功能丰富，而且因为它的稳定性和易用性。无论是个人用途还是商业用途，Gmail都提供了强大的电子邮件解决方案。</p><p>在chatGPT使用体验中，谷歌账号应该时最不容易被封的账号。</p><p>但是国内用户想要注册却并非易事。一般都需要手机号验证码，但是国内又收不到短信。下面介绍一种绕过手机验证的方法来注册谷歌邮箱。</p><h2 id="第一步登录网址"><a href="#第一步登录网址" class="headerlink" title="第一步登录网址"></a>第一步登录网址</h2><p><a href="https://support.google.com/accounts/answer/27441?hl=zh-Hans">绕开手机号注册谷歌邮箱网址</a></p><div align='center'><img src=image.png width = 80%/></div>点击图中的个人账号<div align='center'><img src=image-1.png width = 80%/></div>在这里输入名字和生日等相关详细，注意生日不要写的太小，最好2000之前吧。<div align='center'><img src=image-2.png width = 70%/></div><p>到这里基本就成功啦！</p><div align='center'><img src=image-3.png width = 80%/></div><p>设置密码</p><p>为了好记，我们可以自己设置名字。等到了后面需要输入手机号时我们选择跳过！</p><div align='center'><img src=image-4.png width = 40%/></div><div align='center'><img src=image-5.png width = 40%/></div><p>辅助邮箱和手机号可以自己选择。可以都跳过。</p><div align='center'><img src=image-6.png width = 40%/></div><p>选择我同意。这里就成功啦！</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="2分钟注册谷歌邮箱（无须手机号）"><a href="#2分钟注册谷歌邮箱（无须手机号）" class="headerlink" title="2分钟注册谷歌邮箱（无须手机号）"></a>2分钟注册谷歌邮箱（无须手机号）</h1><p>谷歌邮箱<br>Gmail已经成为全球数以亿计用户的首选电子邮件服务之一，不仅因为其功能丰富，而且因为它的稳定性和易用性。无论是个人用途还是商业用途，Gmail都提供了强大的电子邮件解决方案。</p><p>在chatGPT使用体验中，谷歌账号应该时最不容易被封的账号。</p><p>但是国内用户想要注册却并非易事。一般都需要手机号验证码，但是国内又收不到短信。下面介绍一种绕过手机验证的方法来注册谷歌邮箱。</p><h2 id="第一步登录网址"><a href="#第一步登录网址" class="headerlink" title="第一步登录网址"></a>第一步登录网址</h2><p><a href="https://support.google.com/accounts/answer/27441?hl=zh-Hans">绕开手机号注册谷歌邮箱网址</a></p><div align='center'><img src=image.png width = 80%/></div>点击图中的个人账号<div align='center'><img src=image-1.png width = 80%/></div>在这里输入名字和生日等相关详细，注意生日不要写的太小，最好2000之前吧。<div align='center'><img src=image-2.png width = 70%/></div><p>到这里基本就成功啦！</p><div align='center'><img src=image-3.png width = 80%/></div><p>设置密码</p><p>为了好记，我们可以自己设置名字。等到了后面需要输入手机号时我们选择跳过！</p><div align='center'><img src=image-4.png width = 40%/></div><div align='center'><img src=image-5.png width = 40%/></div><p>辅助邮箱和手机号可以自己选择。可以都跳过。</p><div align='center'><img src=image-6.png width = 40%/></div><p>选择我同意。这里就成功啦！</p><p>欢迎关注我的公众号<strong>小李同学314</strong>，如果你有任何问题都可以后台留言。</p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>chatgpt</tag>
+      
+    </tags>
     
   </entry>
   
@@ -21,7 +53,7 @@
     <link href="/sign-up-openai/"/>
     <url>/sign-up-openai/</url>
     
-    <content type="html"><![CDATA[<h1 id="2分钟注册openai"><a href="#2分钟注册openai" class="headerlink" title="2分钟注册openai"></a>2分钟注册openai</h1><p>openai是全球领先的人工智能公司，旗下的chatGPT被认为是目前最强的大模型。下面介绍注册方法。<br>首先你需要一个大公司的邮箱，这里推荐谷歌邮箱。<br>微软和国内邮箱容易被openai封。<br><a href="https://openai.com/">openai官网</a></p><div align='center'><img src=image.png width = 80%/></div>点击注册<div align='center'><img src=image-1.png width = 80%/></div>输入邮箱地址，一步步按照操作最后在邮箱里验证下就ok了。<p>这里说些不容易被封的技巧：</p><p>不要更换IP地址。</p><p>使用无痕浏览模式。</p><p>尽量使用英语。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="2分钟注册openai"><a href="#2分钟注册openai" class="headerlink" title="2分钟注册openai"></a>2分钟注册openai</h1><p>openai是全球领先的人工智能公司，旗下的chatGPT被认为是目前最强的大模型。下面介绍注册方法。<br>首先你需要一个大公司的邮箱，这里推荐谷歌邮箱。<br>微软和国内邮箱容易被openai封。<br><a href="https://openai.com/">openai官网</a></p><div align='center'><img src=image.png width = 80%/></div>点击注册<div align='center'><img src=image-1.png width = 80%/></div>输入邮箱地址，一步步按照操作最后在邮箱里验证下就ok了。<p>这里说些不容易被封的技巧：</p><p>不要更换IP地址。</p><p>使用无痕浏览模式。</p><p>尽量使用英语。</p><p>欢迎关注我的公众号<strong>小李同学314</strong>，如果你有任何问题都可以后台留言。</p>]]></content>
     
     
     
